@@ -1,0 +1,71 @@
+<div id="productCarousel" class="main-carousel carousel slide">
+  <ol class="carousel-indicators">
+    <li
+      [ngClass]="j === currentIndex | swClass: '':'active'"
+      *ngFor="let banner of items; let j = index"
+      (click)="show(j)"
+    ></li>
+  </ol>
+  <div class="carousel-inner" @initSliderAnimation>
+    <ng-container *ngFor="let banner of items; let i = index">
+      <div
+        [@slideAnimation]="{
+          value: '',
+          params: isSlidedRight ? animateRight : animateLeft
+        }"
+        (@slideAnimation.start)="animationStart()"
+        (@slideAnimation.done)="animationEnd()"
+        *ngIf="i === currentIndex"
+        class="carousel-item"
+      >
+        <img
+          loading="auto"
+          class="third-slide"
+          src="assets/images/default-slide-img.jpg"
+          alt="Third slide"
+        />
+        <img
+          class="background-image"
+          [src]="banner.image"
+          [alt]="banner.title"
+        />
+        <div class="container">
+          <div class="carousel-caption">
+            <h3 class="h1">{{ banner.title }}</h3>
+            <div>
+              <a
+                class="btn pointer"
+                (click)="redirectTo(banner.subCategoryId)"
+                role="button"
+              >
+                Посмотреть предложения
+                <img
+                  loading="auto"
+                  src="assets/icons/icon-angle-white.svg"
+                  class="ml-3"
+                  alt="Angle"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <a
+    *ngIf="items?.length > 1"
+    class="carousel-control-prev pointer"
+    (click)="prev()"
+  >
+    <span class="carousel-control-prev-icon pointer"></span>
+    <span class="sr-only pointer">Previous</span>
+  </a>
+  <a
+    *ngIf="items?.length > 1"
+    class="carousel-control-next pointer"
+    (click)="next()"
+  >
+    <span class="carousel-control-next-icon pointer"></span>
+    <span class="sr-only pointer">Next</span>
+  </a>
+</div>

@@ -1,0 +1,37 @@
+<div class="card" (click)="redirectTo()">
+  <div class="card-img-wrap pointer">
+    <img
+      loading="auto"
+      *ngIf="product.images"
+      class="card-img-top"
+      [src]="product.images | imgUrl"
+      [alt]="product.name"
+    />
+    <img
+      loading="auto"
+      *ngIf="!product.images"
+      class="card-img-top"
+      [src]="
+        'https://meruherbs.com/wp-content/uploads/2017/07/no-product-image-600x600.png'
+      "
+      alt="No product"
+    />
+  </div>
+  <div class="card-body">
+    <p class="card-title pointer">
+      {{ product.name }}
+    </p>
+    <div>
+      <div class="rate">
+        <sport-coach-star-rating
+          tooltip="Рейтинг товара"
+          [feedbackRate]="product.rating | rate"
+        ></sport-coach-star-rating>
+        <p class="rate-amount ml-2">{{ product.feedbacksCount | review }}</p>
+      </div>
+      <p class="card-text price-text">
+        <strong>{{ product.price | currency: 'EUR' }}</strong>
+      </p>
+    </div>
+  </div>
+</div>

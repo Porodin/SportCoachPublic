@@ -1,0 +1,25 @@
+<div class="product-info-tabs">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a
+        class="nav-item nav-link pointer"
+        [ngClass]="!isShowDescription | swClass: '':'active'"
+        (click)="toggleTab()"
+        >Описание</a
+      >
+      <a
+        class="nav-item nav-link pointer"
+        [ngClass]="isShowDescription | swClass: '':'active'"
+        (click)="toggleTab()"
+        >Отзывы {{ product?.feedbacksCount || 0 }}</a
+      >
+    </div>
+  </nav>
+  <div class="tab-content">
+    <div *ngIf="isShowDescription">{{ product?.description }}</div>
+    <sport-coach-feedbacks
+      *ngIf="!isShowDescription"
+      [feedbacks]="product?.feedbacks"
+    ></sport-coach-feedbacks>
+  </div>
+</div>

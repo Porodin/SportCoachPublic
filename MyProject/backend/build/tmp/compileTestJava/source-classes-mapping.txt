@@ -1,0 +1,2 @@
+com/sportCoach/sportCoach/SportCoachApplicationTests.java
+ com.sportCoach.sportCoach.SportCoachApplicationTests

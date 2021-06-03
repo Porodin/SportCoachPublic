@@ -1,0 +1,14 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <div>
+         <a class="navbar-brand" routerLink=""><strong>SportCoach</strong></a>
+      </div>
+      <a class="basket basket_not-empty" routerLink="cart" tooltip="Корзина" position="left">
+        <img loading="auto" src="assets/icons/icon-basket.svg" alt="menu icon" />
+        <span class="product-counter" *ngIf="productCounter$ | async as counter">{{ counter }}
+        </span>
+      </a>
+    </div>
+  </nav>
+</header>

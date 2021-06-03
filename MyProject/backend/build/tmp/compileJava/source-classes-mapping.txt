@@ -1,0 +1,89 @@
+com/sportCoach/service/impl/UserService.java
+ com.sportCoach.service.impl.UserService
+com/sportCoach/repository/ICategoryRepository.java
+ com.sportCoach.repository.ICategoryRepository
+com/sportCoach/controller/CategoryController.java
+ com.sportCoach.controller.CategoryController
+com/sportCoach/model/entity/FeedBacks.java
+ com.sportCoach.model.entity.FeedBacks
+com/sportCoach/controller/UserController.java
+ com.sportCoach.controller.UserController
+com/sportCoach/service/ICategoryService.java
+ com.sportCoach.service.ICategoryService
+com/sportCoach/model/entity/User.java
+ com.sportCoach.model.entity.User
+com/sportCoach/repository/IProductRepository.java
+ com.sportCoach.repository.IProductRepository
+com/sportCoach/service/impl/ProductService.java
+ com.sportCoach.service.impl.ProductService
+com/sportCoach/service/impl/CategoryServiceImpl.java
+ com.sportCoach.service.impl.CategoryServiceImpl
+com/sportCoach/dto/ProductDto.java
+ com.sportCoach.dto.ProductDto
+com/sportCoach/controller/ApplicationController.java
+ com.sportCoach.controller.ApplicationController
+com/sportCoach/dto/PreviewDto.java
+ com.sportCoach.dto.PreviewDto
+ com.sportCoach.dto.PreviewDto$PreviewDtoBuilder
+com/sportCoach/model/entity/Images.java
+ com.sportCoach.model.entity.Images
+com/sportCoach/FacebookAuthenticationToken.java
+ com.sportCoach.FacebookAuthenticationToken
+com/sportCoach/dto/UserDto.java
+ com.sportCoach.dto.UserDto
+ com.sportCoach.dto.UserDto$UserDtoBuilder
+com/sportCoach/FacebookConnectionSignup.java
+ com.sportCoach.FacebookConnectionSignup
+com/sportCoach/config/ApplicationWebMvcConfig.java
+ com.sportCoach.config.ApplicationWebMvcConfig
+com/sportCoach/service/IOrderService.java
+ com.sportCoach.service.IOrderService
+com/sportCoach/controller/ProductController.java
+ com.sportCoach.controller.ProductController
+com/sportCoach/config/HikariDataSourceConfigurer.java
+ com.sportCoach.config.HikariDataSourceConfigurer
+com/sportCoach/dto/ProductDtoApi.java
+ com.sportCoach.dto.ProductDtoApi
+ com.sportCoach.dto.ProductDtoApi$ProductDtoApiBuilder
+com/sportCoach/model/entity/Orders.java
+ com.sportCoach.model.entity.Orders
+com/sportCoach/config/SwaggerConfig.java
+ com.sportCoach.config.SwaggerConfig
+com/sportCoach/FacebookAuthenticationProvider.java
+ com.sportCoach.FacebookAuthenticationProvider
+com/sportCoach/config/ModelMapperConfigurer.java
+ com.sportCoach.config.ModelMapperConfigurer
+com/sportCoach/service/IUserService.java
+ com.sportCoach.service.IUserService
+com/sportCoach/repository/IUserRepository.java
+ com.sportCoach.repository.IUserRepository
+com/sportCoach/dto/CategoryDto.java
+ com.sportCoach.dto.CategoryDto
+com/sportCoach/service/IProductService.java
+ com.sportCoach.service.IProductService
+com/sportCoach/FacebookAuthenticationFilter.java
+ com.sportCoach.FacebookAuthenticationFilter
+com/sportCoach/controller/AdminController.java
+ com.sportCoach.controller.AdminController
+com/sportCoach/dto/OrdersDto.java
+ com.sportCoach.dto.OrdersDto
+com/sportCoach/service/impl/OrderService.java
+ com.sportCoach.service.impl.OrderService
+com/sportCoach/controller/BrandController.java
+ com.sportCoach.controller.BrandController
+com/sportCoach/model/entity/Product.java
+ com.sportCoach.model.entity.Product
+com/sportCoach/model/entity/Characteristics.java
+ com.sportCoach.model.entity.Characteristics
+com/sportCoach/model/entity/Category.java
+ com.sportCoach.model.entity.Category
+com/sportCoach/controller/IndexController.java
+ com.sportCoach.controller.IndexController
+com/sportCoach/controller/HomeController.java
+ com.sportCoach.controller.HomeController
+com/sportCoach/SportCoachApplication.java
+ com.sportCoach.SportCoachApplication
+com/sportCoach/FacebookSignInAdapter.java
+ com.sportCoach.FacebookSignInAdapter
+com/sportCoach/security/SecurityConfig.java
+ com.sportCoach.security.SecurityConfig

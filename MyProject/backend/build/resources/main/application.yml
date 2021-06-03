@@ -1,0 +1,50 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        hikari:
+            connection-timeout: 30000
+            idle-timeout: 60000
+            maximum-pool-size: 120
+            password: porodUrces3985746
+            schema: sportCoach
+            url: jdbc:mysql://localhost:3306/sportcoach_db?serverTimezone=UTC
+            username: root
+        initialization-mode: always
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                format_sql: true
+                proc:
+                    param_null_passing: true
+                show_sql: true
+        show-sql: true
+    security:
+        oauth2:
+            client:
+                registration:
+                    facebook:
+                        client-id: 769520007087282
+                        client-secret: 174f5029753cdebf11c1b85af629c98e
+                        scope: email, public_profile
+                        userAuthorizationUri: https://www.facebook.com/dialog/oauth
+                        tokenName: oauth_token
+                        authenticationScheme: query
+                        clientAuthenticationScheme: form
+                        userInfoUri: https://graph.facebook.com/me
+                    google:
+                        client-id: 541804349631-5bvnj7hk44njqiu7cdkk5h5ngtd4tfta.apps.googleusercontent.com
+                        client-secret: 87g-UsKou3pKNJx8t99_hldg
+                        accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+                        userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+                        clientAuthenticationScheme: form
+                        scope: profile, email
+                        resource:
+                        userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+    thymeleaf:
+        cache: false
+        mode: LEGACYHTML5
+        templates_root: src/main/resources/templates/

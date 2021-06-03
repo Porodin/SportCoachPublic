@@ -1,0 +1,50 @@
+<div class="review">
+  <div class="review-header">
+    <h4>Оставить коментарий</h4>
+  </div>
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="add-review my-12" [formGroup]="feedbackForm">
+        <div class="offer">
+          Добавить оценку
+          <sport-coach-rating
+            formControlName="rate"
+            tooltip="Оцените товар"
+            position="left"
+          ></sport-coach-rating>
+        </div>
+        <label
+          class="feedback-inputs-label"
+          tooltip="Оставьте ваш отзыв о товаре"
+          position="left"
+        >
+          Добавить коментарий
+        </label>
+        <div class="form-group">
+          <textarea
+            formControlName="advantages"
+            class="form-control"
+          ></textarea>
+        </div>
+        <div class="form-valid">
+          <p *ngIf="getField('advantages')?.errors?.minlength">
+            Отзыв должен состоять минимум из 10 символов
+          </p>
+        </div>
+        <div class="button-conrainer">
+          <button
+            type="submit"
+            class="btn btn-outline-primary px-3"
+            (click)="addFeedback(feedbackForm.value)"
+            [disabled]="feedbackForm.invalid"
+          >
+            Добавить отзыв
+          </button>
+          <button class="btn btn-primary px-3 second" (click)="close()">
+            Отменить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

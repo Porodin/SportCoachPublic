@@ -1,0 +1,25 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SportCoach</title>
+</head>
+<body>
+
+
+<div> <a href="/home">Home page</a> </div>
+</body>
+</html>
+-->
+<html xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<nav>
+    <p sec:authentication="name">Username</p>
+    <a th:href="@{/logout}">Logout</a>
+</nav>
+
+<h1>Welcome, <span sec:authentication="name">Username</span></h1>
+<p sec:authentication="authorities">User authorities</p>
+</body>
+</html>
